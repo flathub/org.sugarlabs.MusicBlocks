@@ -71,4 +71,4 @@ modules:
       - type: script
         dest-filename: musicblocks-run
         commands:
-          - exec /app/bin/musicblocks/musicblocks "$@" --no-sandbox
+          - exec /app/bin/musicblocks/musicblocks-launcher "$@" --no-sandbox
