@@ -40,7 +40,7 @@ modules:
       - type: git
         url: 'https://github.com/sugarlabs/musicblocks-launcher'
         tag: 'v1.2.1'
-        commit: '944e98ffe02f04bebc6d9c96cd2357289eb576a7'
+        commit: '8bebbd8e0f3b0ea3f9a70e52445441c7017d0788'
       - type: file
         dest-filename: MusicBlocks.AppImage
         url: https://github.com/sugarlabs/musicblocks-launcher/releases/download/v1.2.1/MusicBlocks-3.5.1-arm64.AppImage
