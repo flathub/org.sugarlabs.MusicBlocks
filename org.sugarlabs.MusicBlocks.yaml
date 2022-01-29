@@ -1,10 +1,10 @@
 app-id: org.sugarlabs.MusicBlocks
 branch: stable
 runtime: org.freedesktop.Platform
-runtime-version: '19.08'
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 base: "org.electronjs.Electron2.BaseApp"
-base-version: '19.08'
+base-version: '21.08'
 separate-locales: false
 command: musicblocks-run
 finish-args:
@@ -16,15 +16,6 @@ finish-args:
   - '--filesystem=home'
   - '--env=MUSICBLOCKS_PATH=/app/share/musicblocks'
 modules:
-  - name: unappimage
-    buildsystem: simple
-    build-commands:
-      - make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS} install INSTALL_DIR=${FLATPAK_DEST}/bin
-    sources:
-      - type: git
-        url: https://github.com/refi64/unappimage
-        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
-  
   - name: mb-data
     buildsystem: simple
     build-commands:
@@ -32,8 +23,8 @@ modules:
 
       - install -d /app/share/appdata
       - mv /app/share/metadata/org.sugarlabs.MusicBlocks.appdata.xml /app/share/appdata
-      
-      - unappimage MusicBlocks.AppImage
+      - chmod +x MusicBlocks.AppImage
+      - ./MusicBlocks.AppImage --appimage-extract
       - rm MusicBlocks.AppImage
       - mv squashfs-root /app/bin/musicblocks
     sources:
