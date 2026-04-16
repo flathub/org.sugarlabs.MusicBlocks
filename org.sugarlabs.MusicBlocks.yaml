@@ -1,10 +1,9 @@
 app-id: org.sugarlabs.MusicBlocks
-branch: stable
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: "org.electronjs.Electron2.BaseApp"
-base-version: '21.08'
+base-version: '25.08'
 separate-locales: false
 command: musicblocks-run
 finish-args:
@@ -36,21 +35,12 @@ modules:
         dest-filename: MusicBlocks.AppImage
         url: https://github.com/sugarlabs/musicblocks-launcher/releases/download/v1.2.1/MusicBlocks-3.5.1-arm64.AppImage
         sha256: 3cca8ad13eb88b976918540857b771350bec36e43e9551df6454bf690cbd131b
-        size: 140783237
         only-arches:
           - aarch64
       - type: file
         dest-filename: MusicBlocks.AppImage
-        url: https://github.com/sugarlabs/musicblocks-launcher/releases/download/v1.2.1/MusicBlocks-3.5.1-armv7l.AppImage
-        sha256: 19fbea50cd4a641d4a2af1eb7e99a640d04187cb740ad43761e640fa974c8198
-        size: 125620262
-        only-arches:
-          - arm
-      - type: file
-        dest-filename: MusicBlocks.AppImage
         url: https://github.com/sugarlabs/musicblocks-launcher/releases/download/v1.2.1/MusicBlocks-3.5.1-x86_64.AppImage
         sha256: 6b385ea53d55396b906f3604ede256ae520f018ef2393631669d7e95fafaa92f
-        size: 134913869
         only-arches:
           - x86_64
 
